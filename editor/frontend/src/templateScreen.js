@@ -18,6 +18,13 @@ const defaultValue = {
     output: ``
 };
 
+//"scripts": [
+//  "node_modules/ace-builds/src-min/ace.js",
+//  "node_modules/ace-builds/src-min/mode-json.js",
+//  "node_modules/ace-builds/src-min/theme-eclipse.js",
+//  { "bundleName": "worker-json", "input": "node_modules/ace-builds/src-min/worker-json.js" }
+//]
+
 class TemplateScreen extends React.Component {
     constructor(props) {
         super(props);
@@ -54,6 +61,7 @@ class TemplateScreen extends React.Component {
             })
             .catch(function(error) {
                 console.log(error);
+                this.setState({ valueOutput: `` });
             })
             .then(function() {
                 // always executed
